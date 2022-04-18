@@ -18,7 +18,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText TxtDni, TxtNombres;
+    EditText TxtDni, TxtNombres, TxtToken;
     Button BtnConsultar;
 
     @Override
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         TxtDni = (EditText) findViewById(R.id.TxtDni);
 
         TxtNombres = (EditText) findViewById(R.id.TxtNombres);
+
+        TxtToken = (EditText) findViewById(R.id.TxtToken);
         
 
         BtnConsultar.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         String dni = TxtDni.getText().toString();
 
-        String url = "https://apiperu.dev/api/dni/" + dni + "?api_token=64186c979b3f5db0466a99aadb49ed76c6fd85d9f7c86828bc9397e7f8b3284a";
+        String token = TxtToken.getText().toString();
+
+        String url = "https://apiperu.dev/api/dni/" + dni + "?api_token=" + token;
 
 
         try {
@@ -64,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
             Element element = document.body();
 
             String resultado = element.text();
-
-            //String mostrar = resultado.replaceAll("successtruedata ", "");
 
             TxtNombres.setText(resultado);
 

@@ -20,6 +20,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BUSCAR"/>
+
+    <EditText
+        android:id="@+id/TxtToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="token"/>
+
     <EditText
         android:id="@+id/TxtNombres"
         android:layout_width="match_parent"
