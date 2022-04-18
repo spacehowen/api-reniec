@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/TxtDni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="INGRESE DNI"
+        android:maxLength="8"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/BtnConsultar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR"/>
+    <EditText
+        android:id="@+id/TxtNombres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="datos"/>
+
+</LinearLayout>
